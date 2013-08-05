@@ -1,0 +1,5 @@
+CherryPy==3.2.4
+Mako==0.8.1
+MarkupSafe==0.18
+uWSGI==1.9.14
+wsgiref==0.1.2
