@@ -21,6 +21,10 @@ class Blog(object):
     def default(self):
         """ Landing page """
         template = self.templates.get_template('index.html')
-        return template.render()
+        blogposts = [{'title': 'test post',
+                      'body': 'Hellooooo!'},
+                     {'title': 'html test',
+                      'body': 'handle me some <b>html</b>'}]
+        return template.render(blogposts=blogposts)
 
 __app__ = Blog()
