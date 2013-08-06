@@ -1,12 +1,8 @@
 <%inherit file="layout.html"/>
+<%namespace name="blog" file="layout.html"/>
 
 <%block name="test">
 	% for post in blogposts:
-	<h2>${post['title']}</h2>
-	<p>
-		<%block filter="h">
-			${post['body']}
-		</%block>
-	</p>
+		${blog.blog_post(post['title'], post['body'])}
 	% endfor
 </%block>

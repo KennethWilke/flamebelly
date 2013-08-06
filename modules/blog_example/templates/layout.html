@@ -15,3 +15,14 @@
 	</div>
 </body>
 </html>
+
+<%def name="blog_post(title, body)">
+	<div>
+		<h2>${title}</h2>
+		<p>
+			<%block>
+			${body}
+			</%block>
+		</p>
+	</div>
+</%def>
