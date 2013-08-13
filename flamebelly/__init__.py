@@ -3,6 +3,7 @@ import uwsgi
 import importlib
 import ConfigParser
 
+config = {}
 
 def application(env, start_response):
     """ uWSGI entry point """
