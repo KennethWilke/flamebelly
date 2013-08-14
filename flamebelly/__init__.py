@@ -3,13 +3,12 @@ import uwsgi
 import importlib
 import ConfigParser
 
-config = {}
+# Read and parse config
+config = ConfigParser.SafeConfigParser()
+config.read(uwsgi.opt['ini'])
 
 def application(env, start_response):
     """ uWSGI entry point """
-    # Read and parse config
-    config = ConfigParser.SafeConfigParser()
-    config.read(uwsgi.opt['ini'])
     # Instantiate and configure flamebelly server
     flamebelly = Flamebelly()
     flamebelly.load_modules(config.items('flamebelly_modules'))
