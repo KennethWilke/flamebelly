@@ -1,2 +1,4 @@
 *.pyc
 venv/
+.gitmodules
+modules/im_dashboard
